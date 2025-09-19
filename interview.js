@@ -94,8 +94,6 @@ async function getUserColumnSelection() {
     });
 }
 
-// console.log(assetData);
-
 import OpenAI from "openai";
 
 // Set up OpenAI API configuration
@@ -159,6 +157,5 @@ Analyze this data and answer the user's question with specific numbers and findi
     const userPrompt = dataContext + '\n\nQuestion: ' + userQuestion;
     
     const summary = await getOpenAISummary(userPrompt);
-    console.log("User Prompt:\n", userPrompt);
     console.log("OpenAI Summary:\n", summary);
 })();
